@@ -1,2 +1,2 @@
 # Movie-Mind
-A simple movie recommendation system using ml model
+A simple movie recommendation system using ML model
