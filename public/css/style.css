@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+}
+
+.navbar ul li a:hover {
+    color: yellow;
+}
+
+.nav-links {
+    display: flex;
+    flex: 1;  /* Makes it take available space */
+    justify-content: center; /* Centers the menu */
+    list-style: none;
+}
+
+.auth-buttons {
+    display: flex; /* Aligns Sign Up & Sign In horizontally */
+}
+
+.auth-buttons a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 15px;
+    margin-left: 10px; /* Adds space between buttons */
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+.auth-buttons a:hover {
+    background-color: yellow;
+    color: black;
+}
+
+
+/* Main Content */
+.content {
+    text-align: center;
+    padding: 50px;
+}
+
+/* Contact Box Styling */
+.contact-box {
+    background-color: #222;  /* Dark background */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    text-align: center;
+    width: 750px;
+    margin: 20px auto; /* Centers the box */
+}
+
+/* Input Field Styling */
+.contact-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+}
+
+/* Container for input and button */
+.contact-input-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* Adjust input width to fit button */
+.contact-input {
+    flex: 1;
+    width: calc(100% - 70px); /* Adjust for button width */
+    margin-right: 10px; /* Space between input and button */
+}
+
+/* Site Quote Styling */
+.site-quote {
+    font-style: italic;
+    color: #bbb;
+    margin-top: 10px;
+}
+
+/* Button styling */
+.contact-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #cccc22;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: orange;
+}
+
+/* top movies styling */
+
+.top-movies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.top-movies a{
+    text-decoration: none;
+}
+
+.poster-card {
+    width: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: white;
+    text-align: center;
+}
+
+.poster-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.poster-name {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #fff;
+    font-family: "Playwrite IN", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: bold;
+    color: black;
+}
+
+/* Recommened movies css */
+
+.recommended-top-movies {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Changed from flex to grid */
+    gap: 30px; /* Increased gap for better spacing */
+    max-width: 900px;
+    margin: auto;
+    justify-content: center;
+}
+
+.recommended-top-movies a{
+    text-decoration: none;
+}
+
+.recommended-poster-card {
+    width: 100%; /* Adjusted to fit the grid */
+    border-radius: 15px; /* Increased border-radius for a smoother look */
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
+    background: white;
+    text-align: center;
+}
+
+.recommended-poster-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.recommended-poster-name {
+    padding: 15px; /* Increased padding for better spacing */
+    font-size: 20px; /* Enlarged font size */
+    font-weight: bold;
+    background: #fff;
+    font-family: "Playwrite IN", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: black;
+}
+
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

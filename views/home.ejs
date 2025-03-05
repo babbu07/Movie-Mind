@@ -1,0 +1,26 @@
+<%- include("partials/header") -%>
+    <!-- Main Content -->
+    <div class="content">
+        <div class="contact-box">
+            <form action="/submit" method="post">
+                <div class="contact-input-container">
+                        <input type="text" class="contact-input" placeholder="Enter your message..." name="movieName">
+                        <button class="contact-button">Send</button>
+                </div>
+            </form>
+            <p class="site-quote">"Cinema should make you forget you are sitting in a theater."</p>
+        </div>
+        
+        <div class="<%= posterStyle[0] %>">
+            <% posters.forEach((poster) => { %>
+                <div class="<%= posterStyle[1] %>">
+                    <a href="<%= poster.linkUrl %>" class="poster-card">
+                        <img src="<%= poster.imageUrl %>" alt="Poster">
+                        <div class="<%= posterStyle[2] %> "><%= poster.name %></div>
+                    </a>                    
+                </div>
+            <% }) %>
+        </div>
+    </div>
+
+<%- include("partials/footer") -%>
