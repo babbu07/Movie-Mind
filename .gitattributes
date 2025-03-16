@@ -1,3 +1,2 @@
 *.pkl filter=lfs diff=lfs merge=lfs -text
-mlProject/similarity.pkl filter=lfs diff=lfs merge=lfs -text
 *.mov filter=lfs diff=lfs merge=lfs -text
