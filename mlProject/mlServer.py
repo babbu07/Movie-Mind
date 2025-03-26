@@ -10,6 +10,12 @@ movies = pd.DataFrame(movies_dict)
 
 similarity = pickle.load(open('similarity.pkl','rb'))
 
+
+# Title finding
+myDf = movies["title"]
+model = pickle.load(open("titleFindingModel.pkl", "rb"))
+embedding = pickle.load(open("embeddingTitle.pkl", "rb"))
+
 def recommed(movie):
     movie_index = movies[movies['title']==movie].index[0]
     distances = similarity[movie_index]
@@ -18,6 +24,15 @@ def recommed(movie):
     for i in movies_list:
         return_list.append(int(movies.iloc[i[0]].movie_id))
     return return_list
+
+def getThreeTitle(name):
+    nameEncode = model.encode(name)
+    similarityTitle = sorted(list(enumerate(model.similarity(embedding, nameEncode))),reverse=True, key=lambda x: x[1])[0:3]
+    return myDf.iloc[similarityTitle[0][0]]
+    # rList = []
+    # for i in similarityTitle:
+    #     rList.append(myDf.iloc[i[0]])
+    # print(rList)
     
 @app.route("/predict", methods=["POST"])
 def predict():
@@ -27,6 +42,9 @@ def predict():
         
         # Extract the string input
         input_movie = data.get("input", "")
+        
+        # Title matched to the best one
+        input_movie = getThreeTitle(input_movie)
         
         # Ensure input is a string
         if not isinstance(input_movie, str):

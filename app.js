@@ -50,8 +50,6 @@ app.get("/:movieName", async function(req, res) {
         // Ensure getPrediction completes before accessing movieIds
         await getPrediction(movieName);
 
-        console.log(movieIds); // Ensure movieIds is updated
-
         if (movieIds.length > 0) {
             let recommendedMoviesDetails = [];
 
